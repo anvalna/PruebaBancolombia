@@ -1,6 +1,7 @@
 package com.bancolombia.test;
 
 import com.bancolombia.test.page.PageWeb;
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -52,18 +53,18 @@ public class WebAction {
         pageWeb.seleccionarOpcionConoceMas();
     }
 
-    public void seleccionarOpcionDocumentos(){
+    public void seleccionarOpcionDocumentos() throws InterruptedException {
         PageWeb pageWeb = new PageWeb(driver);
         pageWeb.seleccionarOpcionDocumentos();
     }
 
-    public void seleccionarOpcionReglamento(){
+    public void seleccionarOpcionReglamento() throws InterruptedException {
         PageWeb pageWeb = new PageWeb(driver);
         pageWeb.seleccionarReglamento();
     }
 
     public void validarDocumentoPdf() {
         PageWeb pageWeb= new PageWeb(driver);
-        //pageWeb.validarDocumentoPdf();
+        Assert.assertTrue("Se abrio página con PDF",pageWeb.validarDocumentoPdf());
     }
 }

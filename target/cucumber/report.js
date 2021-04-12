@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 7458252100,
+  "duration": 6382708300,
   "status": "passed"
 });
 formatter.scenario({
@@ -73,61 +73,67 @@ formatter.match({
   "location": "StepVirtual_Investment.heIngresadoALaPaginaDeBancolombia()"
 });
 formatter.result({
-  "duration": 7412041800,
+  "duration": 7434145400,
   "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.seleccionoLaOpcionPersonas()"
 });
 formatter.result({
-  "duration": 10529755600,
-  "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for alert to be present (tried for 10 second(s) with 500 milliseconds interval)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027PSOFKA0073\u0027, ip: \u002710.0.75.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_211\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.38.552522 (437e6fbedfa876..., userDataDir: C:\\Users\\ANGEL~1.VAL\\AppDat...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 89.0.4389.114, webStorageEnabled: true}\nSession ID: ee6645198f482d27d3dc70f7b478ae7c\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\r\n\tat com.bancolombia.test.page.PageWeb.seleccionarPersonas(PageWeb.java:54)\r\n\tat com.bancolombia.test.WebAction.seleccionarPersonas(WebAction.java:27)\r\n\tat com.bancolombia.test.stepsDefinition.StepVirtual_Investment.seleccionoLaOpcionPersonas(StepVirtual_Investment.java:39)\r\n\tat ✽.When selecciono la opcion Personas(virtual_investment.feature:10)\r\n",
-  "status": "failed"
+  "duration": 2621662600,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.seleccionoLaOpcionSolicitaTusProductos()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 287079000,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.seleccionoLaOpcionInversiones()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 5014021200,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.seleccionoMontoMinimo()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 513504700,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.seleccionoLaOpcionConoceMas()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 3757576000,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.selecccionoLaOpcionDocumentos()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 411755900,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.seleccionoLaOpcionReglamentoInversionVirtual()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 5290162700,
+  "status": "passed"
 });
 formatter.match({
   "location": "StepVirtual_Investment.observoElDocumentoConLaInformacionCorrespondiente()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 2224815001,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 45900,
+  "duration": 1297596700,
   "status": "passed"
 });
 });

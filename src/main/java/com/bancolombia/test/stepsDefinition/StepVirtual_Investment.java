@@ -26,7 +26,7 @@ public class StepVirtual_Investment {
 
     @After
     public void tearDown(){
-        //driver.close();
+        driver.quit();
     }
 
     @Given("^he ingresado a la pagina de bancolombia$")
@@ -61,12 +61,12 @@ public class StepVirtual_Investment {
     }
 
     @And("^seleccciono la opcion documentos$")
-    public void selecccionoLaOpcionDocumentos() {
+    public void selecccionoLaOpcionDocumentos() throws InterruptedException {
         webAction.seleccionarOpcionDocumentos();
     }
 
     @And("^selecciono la opcion Reglamento inversion virtual$")
-    public void seleccionoLaOpcionReglamentoInversionVirtual() {
+    public void seleccionoLaOpcionReglamentoInversionVirtual() throws InterruptedException {
        webAction.seleccionarOpcionReglamento();
     }
 

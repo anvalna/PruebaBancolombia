@@ -38,10 +38,10 @@ public class PageWeb {
     @FindBy(xpath = "//*[@Id = \"filtrado-conoce-inversion-0\"]")
     private WebElement opcionConoceMas;
 
-    @FindBy(xpath = "/*[text() = \"Documentos\"]")
+    @FindBy(xpath = "//*[text() = \"Documentos\"]")
     private WebElement opcionDocumentos;
 
-    @FindBy(xpath = "//*[@href=\"/wcm/connect/www.grupobancolombia.com15880/fee51124-9970-433f-919b-48af49d1c081/Contrato+Inversi%C3%B3n+Virtual.pdf?MOD=AJPERES&CVID=mGPj0Ri\"]")
+    @FindBy(xpath = "//*[@src=\"/wcm/connect/69304693-1ff3-43a0-bc20-291e4b104e8a/save.png?MOD=AJPERES\"]")
     private WebElement opcionReglamento;
 
     public PageWeb(WebDriver driver){
@@ -50,15 +50,11 @@ public class PageWeb {
     }
 
     public void seleccionarPersonas() {
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.alertIsPresent());
-        Alert alert = driver.switchTo().alert();
-        alert.accept();
-        /*if(opcionPersonas.isDisplayed()){
+        if(opcionPersonas.isDisplayed()){
             opcionPersonas.click();
         }else{
             System.out.println("No se ha desplegado opción Personas");
-        }*/
+        }
 
     }
 
@@ -92,20 +88,33 @@ public class PageWeb {
         }
     }
 
-    public void seleccionarOpcionDocumentos(){
+    public void seleccionarOpcionDocumentos() throws InterruptedException {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,350)", "");
+        js.executeScript("window.scrollBy(0,1700)", "");
+        //Thread.sleep(5000);
         if(opcionDocumentos.isDisplayed()){
             opcionDocumentos.click();
         }
     }
 
-    public void seleccionarReglamento() {
+    public void seleccionarReglamento() throws InterruptedException {
+        Thread.sleep(5000);
         if (opcionReglamento.isDisplayed()) {
             opcionReglamento.click();
         }
     }
 
 
+    public boolean validarDocumentoPdf() {
+        for(String winHandle : driver.getWindowHandles()){
+            driver.switchTo().window(winHandle);
+        }
+        if(driver.getCurrentUrl().equalsIgnoreCase("https://www.grupobancolombia.com/wcm/connect/www.grupobancolombia.com15880/fee51124-9970-433f-919b-48af49d1c081/Contrato+Inversi%C3%B3n+Virtual.pdf?MOD=AJPERES&CVID=mGPj0Ri")){
+            System.out.println("Se desplego pdf correctamente");
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
 
